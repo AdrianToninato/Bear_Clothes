@@ -53,7 +53,7 @@
             <!-- REGISTER -->
             <div class="col-md-6 login-form-2">
                 <div class="login-logo">
-                    <img src="./img/brand/logoBranco.png" alt="" />
+                    <img src="./img/brand/logoPretoBranco.png" alt="" />
                 </div>
                 <h3>REGISTRE-SE</h3>
                 <div class="form-group text-center mb-3">
