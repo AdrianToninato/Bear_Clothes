@@ -2,23 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-
-  <title>Bear Clothes</title>
-  <link rel="shortcut icon" href="./img/brand/logoPretoBranco.png" type="image/x-icon" />
-
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Meu CSS -->
-  <link rel="stylesheet" href="./css/myCss.css">
-
-
+  <?php include_once "./php/includes/head.php" ?>
 </head>
 
 <body>
@@ -51,39 +35,9 @@
   <!-- Linha Laranja -->
   <div class="countainer-fluid" id="linha"></div>
 
-  <!-- Cards -->
-  <div class="countainer-fluid">
+  <?php include_once "./php/includes/gridProducts.php" ?>
 
-    <!-- Row -->
-    <div class="row my-5 mx-5">
-
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="./img/products/tshirt_01.jpg" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Camiseta Bear Clothes</h5>
-          <p class="card-text">Camiseta 100% de algodão com estampa em serigrafia.</p>
-          <div class="row">
-            <h5 class="col-5">49,99R$</h5>
-            <a href="#" class="btn col-6" id="buttonNav">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card ml-5" style="width: 18rem;">
-        <img class="card-img-top" src="./img/products/tshirt_01.jpg" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Camiseta Bear Clothes</h5>
-          <p class="card-text">Camiseta 100% de algodão com estampa em serigrafia.</p>
-          <div class="row">
-            <h5 class="col-5">49,99R$</h5>
-            <a href="#" class="btn col-6" id="buttonNav">COMPRAR</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+  <?php include_once "./php/includes/footer.php" ?>
 
   <!-- JS BOOTSTRAP -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
