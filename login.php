@@ -68,7 +68,9 @@
                     <h5 class="mb-3">ou</h5>
                 </div>
                 <div class="form-group text-center">
-                    <a class="btn btn-outline-light mt-3" href="./register.php" role="button">Cadastrar</a>
+                    <a class="btn btn-outline-light my-3" href="./register.php" role="button">Cadastrar</a>
+                    <br>
+                    <a class="text-white mt-3" href="./registerFunc.php">colaborador</a>
                 </div>
                 </form>
             </div>
