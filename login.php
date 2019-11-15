@@ -1,3 +1,69 @@
+<?php 
+// Realizando conexão.
+include_once ('connexion.php');
+
+// Iniciando sessão.
+session_start ();
+
+// Botão enviar
+// Se existe $_POST['btn-enter'], significa que foi clicado.
+if (isset($_POST['btn-enter'])):
+
+    $errors = array (); // Criando array que irá receber erros.
+    $login = mysqli_escape_string ($conn, $_POST['user']); // Filtrando login.
+    $pass = mysqli_escape_string ($conn, $_POST['pass']); // Filtrando senha.
+    $pass_encrip = hash('sha512', $pass); // Criptografando senha;
+
+    $sql = "SELECT email FROM tb_customer WHERE email = '$login' ";  // Consultando se existe login no banco de dados;
+    $result = mysqli_query($conn, $sql); 
+
+    if (mysqli_num_rows($result) > 0): // Se o número de linhas retornadas for maior que 0
+
+        $sql = "SELECT * FROM tb_customer WHERE email = '$login' AND pass = '$pass_encrip' ";
+        $result = mysqli_query ($conn, $sql);
+
+        if (mysqli_num_rows($result) == 1): // Se o número de linhas for igual a 1, significa que existe o usuário.
+
+            $datas = mysqli_fetch_array ($result); // Converte resultado em um array.
+            $_SESSION['logado'] = true; // Criando sessão logado.
+            $_SESSION['id_customer'] = $datas['idCustomer']; 
+            $_SESSION['acesso'] = $datas['code_user'];
+
+            // foreach ($datas as $value):
+
+                if ($_SESSION['acesso'] == 1):
+
+                    header ('Location: customer.php');
+
+                elseif ($_SESSION['acesso'] == 0):
+                    
+                    header ('Location: adm.php');
+
+                else: 
+
+                    header ('Location: index.php');
+
+                endif;
+
+                mysqli_close($conn);
+
+            // endforeach;
+
+        else:
+
+            $errors[] = "<li style='color: orangered;' class='mb-2'> Usuário e senha não conferem! </li>";
+
+        endif;            
+
+    else:
+
+        $errors[] = "<li style='color: orangered; ' class='mb-2' > Usuário inexistente </li>";
+
+    endif;
+
+endif; 
+
+?>
 <!doctype html>
 <html lang="pt-BR">
 
@@ -12,25 +78,43 @@
 
 
 
-    <div class="container login-container">
+      <div class="container login-container">
         <div class="row">
 
             <!-- LOGIN -->
             <div class="col-md-6 login-form-1">
                 <h3>LOGIN</h3>
+                <?php
+                
+                if (!empty($errors)):
 
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Login" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Senha" value="" />
-                </div>
-                <div class="form-group">
-                    <button class="btn btnSubmit" type="submit" id="buttonNav">Entrar</button>
-                </div>
-                <div class="form-group">
-                    <a href="#" class="btnForgetPwd">Esqueceu a senha?</a>
-                </div>
+                    foreach ($errors as $error):
+
+                        echo $error;
+
+                    endforeach;
+                
+                endif;
+
+                ?>
+                <form id="login" name="login" method="post" action="login.php"> 
+                    <div class="form-group">
+                        <input type="text" name="user" class="form-control" placeholder="Login" id="usuario" value="" />
+                        <!-- este espaço serve para exibir os erros validados pelo front -->
+                        <p id="legenda_usuarioLog" class="erro_legenda"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="pass" class="form-control" placeholder="Senha" id="senha" value="" />
+                        <!-- este espaço serve para exibir os erros validados pelo front -->
+                        <p id="legenda_senhaLog" class="erro_legenda"></p>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btnSubmit" name="btn-enter" type="submit" id="buttonNav">Entrar</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btnForgetPwd">Esqueceu a senha?</a>
+                    </div>
+                </form>
 
             </div>
 
@@ -56,7 +140,6 @@
                     <br>
                     <a class="text-white mt-3" href="./registerFunc.php">colaborador</a>
                 </div>
-                </form>
             </div>
         </div>
     </div>
@@ -73,6 +156,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>

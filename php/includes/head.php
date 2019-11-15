@@ -12,5 +12,3 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Meu CSS -->
 <link rel="stylesheet" href="./css/myCss.css">
-<!-- Material Design Bootstrap -->
-<link href="css/mdb.min.css" rel="stylesheet">

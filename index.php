@@ -37,6 +37,7 @@
 
   <?php include_once "./php/includes/gridProducts.php" ?>
 
+  <!-- Footer -->
   <?php include_once "./php/includes/footer.php" ?>
 
   <!-- JS BOOTSTRAP -->

@@ -10,7 +10,7 @@
   <?php include_once "./php/includes/navbar.php" ?>
   <div id="preto"></div>
 
-  <form class="container mt-5">
+  <form class="container my-5">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
@@ -56,6 +56,7 @@
   </form>
 
 
+  <!-- Footer -->
   <?php include_once "./php/includes/footer.php" ?>
   <!-- JS BOOTSTRAP -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

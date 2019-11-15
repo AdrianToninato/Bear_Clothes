@@ -1,4 +1,6 @@
 <!-- Footer -->
+ <!-- Linha Laranja -->
+ <div class="countainer-fluid" id="linha"></div>
 <footer class="page-footer font-small bg-dark nav-dark text-white pt-4">
 
   <!-- Footer Links -->

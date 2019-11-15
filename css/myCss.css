@@ -24,6 +24,10 @@ nav a {
     color: #fff;
 }
 
+#bg {
+    background-color: orangered;
+}
+
 /******** INDEX *******/
 /**** COURSEL ****/
 #carouselExampleControls {
@@ -108,3 +112,30 @@ nav a {
     text-decoration:none;
     color:#fff;
 }
+.container {
+    max-width: 960px;
+  }
+  
+/******** MALE ********/
+  /*
+   * Utilitários extras
+   */
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+
+.erro_legenda{
+    color: orangered;
+}
+
+ 
