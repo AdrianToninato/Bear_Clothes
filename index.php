@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="pt-BR">
 
+<!-- Comentário teste -->
+
 <head>
   <?php include_once "./php/includes/head.php" ?>
 </head>
