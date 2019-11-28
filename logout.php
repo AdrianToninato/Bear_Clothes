@@ -9,4 +9,5 @@ session_unset();
 // Destruindo sessão.
 session_destroy();
 
+// Redirecionando usuário/cliente para o login.
 header ('Location: index.php');

@@ -16,7 +16,7 @@ include_once ('connexion.php');
   <div id="preto"></div>
 
   
-  <form class="container my-5 " id="cadastrar" name="cadastrar" method="post" action="signup.php">
+  <form class="container my-5 " id="cadastrar" name="cadastrar" method="post" action="create.php">
     <div class="form-row">
     <!-- Inseri essa linha -->
     <div class="form-group col-md-12">

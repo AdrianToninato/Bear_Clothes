@@ -10,49 +10,57 @@
   <?php include_once "./php/includes/navbar.php" ?>
   <div id="preto"></div>
 
-  <form class="container my-5">
+  <form action="create.php" method="POST" class="container my-5">
     <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputNome4">Nome completo *</label>
+      <input type="text" name="user_name" class="form-control" placeholder="Nome">
+    </div>
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <label for="inputEmail4">Email * </label>
+        <input type="email" name="user_email" class="form-control" id="inputEmail4" placeholder="Email">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Senha</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+        <label for="inputPassword4">Senha *</label>
+        <input type="password" name="user_pass" class="form-control" id="inputPassword4" placeholder="Senha">
       </div>
     </div>
     <div class="form-group">
-      <label for="inputAddress">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+      <label for="inputAddress">Endereço *</label>
+      <input type="text" name="user_address" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
     </div>
     <div class="form-group">
-      <label for="inputAddress2">Endereço 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+    <label for="inputAddress">Número da casa *</label>
+    <input type="text" name="user_number" name="number" class="form-control" placeholder="Insira o número">
+  </div>
+    <div class="form-group">
+      <label for="inputAddress2">Complemento</label>
+      <input type="text" name="user_complement" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputCity">Cidade</label>
-        <input type="text" class="form-control" id="inputCity">
+        <label for="inputCity">Cidade *</label>
+        <input type="text" name="user_city" class="form-control" id="inputCity">
       </div>
       <div class="form-group col-md-4">
-        <label for="inputCEP">Estado</label>
-        <input type="text" class="form-control" id="inputCEP">
+        <label for="inputCEP">Estado *</label>
+        <input type="text" name="user_state" class="form-control" id="inputCEP">
       </div>
 
       <div class="form-group col-md-2">
-        <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="inputCEP">
+        <label for="inputCEP">CEP *</label>
+        <input type="text" name="user_zipcode" class="form-control" id="inputCEP">
       </div>
     </div>
     <div class="form-group">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck">
         <label class="form-check-label" for="gridCheck">
-          Estou ciente e ACEITO os termos de contrato.
+          Estou ciente e ACEITO os termos de contrato. *
         </label>
       </div>
     </div>
-    <button class="btn" type="submit" id="buttonNav">Cadastrar</button>
+    <button class="btn" name="btn-user-register" type="submit" id="buttonNav">Cadastrar</button>
   </form>
 
 
