@@ -10,27 +10,30 @@
     <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link text-white" href="./male.php">Masculino</a>
+                <a class="nav-link text-white" href="./quemSomos.php">Quem Somos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="./female.php">Feminino</a>
+                <a class="nav-link text-white" href="./contato.php">Contato</a>
             </li>
-            <a class="text-white h4 ml-5" href="https://www.facebook.com " target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a class="text-white h4 ml-4" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="text-white h4 ml-5" href="https://www.facebook.com " target="_blank"><i
+                    class="fab fa-facebook-square"></i></a>
+            <a class="text-white h4 ml-4" href="https://www.instagram.com" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
         </ul>
 
         <!-- Search Fomr & Login -->
         <form class="form-inline" method="POST" action="barra-busca.php">
-            <input class="form-control form-control-sm bg-transparent text-white" list="destaques" name="pesquisar" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="formNav">
-            <button class="btn btn-sm mr-3 ml-2" type="submit" id="buttonNav"><i class="fas fa-search mr-2"></i>Pesquisar</button>
+            <input class="form-control form-control-sm bg-transparent text-white" list="destaques" name="pesquisar"
+                type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="formNav">
+            <button class="btn btn-sm mr-3 ml-2" type="submit" id="buttonNav"><i
+                    class="fas fa-search mr-2"></i>Pesquisar</button>
             <a class="btn btn-outline-light btn-sm mr-3" href="./login.php" role="button">Login</a>
         </form>
-        <datalist id="destaques">   
+        <datalist id="destaques">
             <option value="Sweater de urso"></option>
             <option value="Camisa urso Polar"></option>
             <option value="Casaco urso pardo"></option>
         </datalist>
-
 
     </div>
 </nav>
