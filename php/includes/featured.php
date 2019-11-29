@@ -1,21 +1,32 @@
-<article>
+
+
 <div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row">
+<div class="container">
+<section class="border-bottom border-dark">
+
+  
+    
+  <div class="row">
+    <div class="mt-auto ">
+      <h5 class="font-weight-bold h1 mb-3">Produtos em destaque</h5>
+    </div>
+  </div>
+
+  <div class="row">
   <?php 
      
      include_once ('connexion.php');
 
-	$result = "SELECT * FROM bear_produtos ";
+	$result = "SELECT * FROM bear_destaques ";
   $resultado = mysqli_query($conn, $result);
 
 
 	while($rows = mysqli_fetch_array($resultado)){
       echo "
-      <div class='col-md-4'>
+      <div class='col-md-4 mt-3'>
         <div class='card mb-4 shadow-sm'>
         <a tabindex='0' href='".$rows['link']."' class='text-body'>
-          <img class='card-img-top  img-fluid' src='".$rows['img']."'' alt='imagem do produto no card'>
+          <img class='card-img-top  img-fluid' style='height: 240px;' src='".$rows['img']."'' alt='imagem do produto no card'>
         </a>
           <div class='card-body'>
           <a tabindex='0' href='".$rows['link']."'' class='text-body bear_link_noDec'>
@@ -40,8 +51,7 @@
     
 
 </div>
-  </div>
+ 
+</section>
 </div>
-</article>
-          
-           
+</div>

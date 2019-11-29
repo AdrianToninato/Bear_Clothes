@@ -20,11 +20,17 @@
         </ul>
 
         <!-- Search Fomr & Login -->
-        <form class="form-inline">
-            <input class="form-control form-control-sm bg-transparent text-white" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="formNav">
+        <form class="form-inline" method="POST" action="barra-busca.php">
+            <input class="form-control form-control-sm bg-transparent text-white" list="destaques" name="pesquisar" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="formNav">
             <button class="btn btn-sm mr-3 ml-2" type="submit" id="buttonNav"><i class="fas fa-search mr-2"></i>Pesquisar</button>
             <a class="btn btn-outline-light btn-sm mr-3" href="./login.php" role="button">Login</a>
         </form>
+        <datalist id="destaques">   
+            <option value="Sweater de urso"></option>
+            <option value="Camisa urso Polar"></option>
+            <option value="Casaco urso pardo"></option>
+        </datalist>
+
 
     </div>
 </nav>

@@ -138,7 +138,18 @@ nav a {
     color: orangered;
 }
 
-.tablehead {
+.bear_Orange{
+    color: orangered;
+}
+ 
+.bear_link_C:hover{
+    color: orangered;
+}
+.bear_link_noDec:hover{
+    text-decoration: none;
+}
+
+.bear_btn_C:hover{
     background-color: orangered;
     color: white;
 }

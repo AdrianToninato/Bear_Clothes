@@ -8,9 +8,9 @@ $pass = "usbw";
 $database = "db_login";
 
 $conn = mysqli_connect ($host, $user, $pass, $database);
-$conn->set_charset('utf8'); //Para não ter problemas com acentos no Banco de Dados;
+$conn->set_charset('utf8');
 
-if (mysqli_connect_error()): // Caso haja algum erro ao tentar conectar com o Banco, seja emitida uma mensagem.
+if (mysqli_connect_error()):
 
     echo "The connexion failed: ".mysqli_connect_error();
 

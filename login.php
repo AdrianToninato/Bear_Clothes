@@ -22,78 +22,74 @@ if (isset($_POST['btn-enter'])):
 
     if (mysqli_num_rows($result_user) > 0): // Se o número de linhas retornadas for maior que 0
 
-        // Procurando usuário e senha no banco referente.
         $sql = "SELECT * FROM user_register WHERE email = '$login' AND pass = '$pass_encrip' ";
         $result = mysqli_query ($conn, $sql);
 
-        if (mysqli_num_rows($result) == 1):  // Se existir o colaborador.
+        if (mysqli_num_rows($result) == 1):
 
             $datas = mysqli_fetch_array ($result); // Converte resultado em um array.
             $_SESSION['logado'] = true; // Criando sessão logado.
-            $_SESSION['idUser'] = $datas['cdUser']; // Pegando id do colaborador.
-            $_SESSION['acesso'] = $datas['cdPermission']; // Pegando codigo de permissão.
+            $_SESSION['idUser'] = $datas['cdUser']; 
+            $_SESSION['acesso'] = $datas['cdPermission'];
 
-            // Se for cliente
             if ($_SESSION['acesso'] == 1):
-            // Será redirecionado para a página referente.
+
                 header ('Location: customer.php');
-            // Se for adm
+
             elseif ($_SESSION['acesso'] == 0):
-            // Será redirecionado para a página referente.
+                    
                 header ('Location: adm.php');
-            // Caso contrário, volta pra página index.
+
             else: 
 
                 header ('Location: index.php');
 
             endif;
 
-            mysqli_close($conn); // Boas práticas. Finalizando conexão.
+            mysqli_close($conn);
 
         else:
-            // Caso nenhuma usuário ou senha estejam incorretos.
+
             $errors[] = "<li style='color: orangered;' class='mb-2'> Usuário e senha não conferem! </li>";
 
         endif;
 
-    elseif (mysqli_num_rows($result_customer) > 0): // Se o número de linhas retornadas for maior que 0
+    elseif (mysqli_num_rows($result_customer) > 0):
 
-        // Procurando usuário e senha no banco referente.
         $sql = "SELECT * FROM customer_register WHERE email = '$login' AND pass = '$pass_encrip' ";
         $result = mysqli_query ($conn, $sql);
 
-        if (mysqli_num_rows($result) == 1): // Se existir o cliente.
+        if (mysqli_num_rows($result) == 1):
 
             $datas = mysqli_fetch_array ($result); // Converte resultado em um array.
             $_SESSION['logado'] = true; // Criando sessão logado.
-            $_SESSION['idCustomer'] = $datas['cdCustomer']; // Pegando id do cliente.
-            $_SESSION['acesso'] = $datas['cdPermission'];  // Pegando codigo de permissão.
+            $_SESSION['idCustomer'] = $datas['cdCustomer']; 
+            $_SESSION['acesso'] = $datas['cdPermission'];
 
-            // Se for cliente
             if ($_SESSION['acesso'] == 1):
-            // Será redirecionado para a página referente.
+
                 header ('Location: customer.php');
-            // Se for adm
+
             elseif ($_SESSION['acesso'] == 0):
-            // Será redirecionado para a página referente.   
+                    
                 header ('Location: adm.php');
-            // Caso contrário
+
             else: 
-            // Será redirecionado para a página principal.
+
                 header ('Location: index.php');
 
             endif;
 
-            mysqli_close($conn); // Boas práticas. Finalizando conexão.
+            mysqli_close($conn);
 
         else:
-            // Caso nenhuma usuário ou senha estejam incorretos.
+
             $errors[] = "<li style='color: orangered;' class='mb-2'> Usuário e senha não conferem! </li>";
 
         endif;
 
     else:
-        // Caso nenhuma linha de registro seja encontrada nos bancos.
+
         $errors[] = "<li style='color: orangered; ' class='mb-2' > Usuário inexistente </li>";
 
 endif;
@@ -124,12 +120,12 @@ endif;
             <div class="col-md-6 login-form-1">
                 <h3>LOGIN</h3>
                 <?php
-                // Se o números de erros não for 0
+                
                 if (!empty($errors)):
 
                     foreach ($errors as $error):
 
-                        echo $error; // expõe o erro;
+                        echo $error;
 
                     endforeach;
                 
