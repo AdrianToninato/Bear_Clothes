@@ -66,7 +66,7 @@
     <!-- Comentários -->
     <div class="container mb-5">
         <div class="row">
-            <?php include_once "./php/includes/cardComentario.php" ?>
+            <?php include_once "./php/comentarios/cards.php" ?>
         </div>
     </div>
 
