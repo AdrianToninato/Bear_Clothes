@@ -12,44 +12,7 @@
     <?php include_once "./php/includes/navbar.php" ?>
     <div id="preto"></div>
 
-    <!-- Texto e Fotos -->
-    <div class="container my-5">
-        <div class="row">
-            <h1 class="col-12 text-center mt-5 mb-3"> FALE CONOSCO:</h1>
-
-            <!-- Social buttons -->
-            <h3 class="col-12 text-center mt-5 mb-0" > Pelas Redes Sociais </h3>
-                <ul class="list-unstyled list-inline text-center col-12 mt-4">
-                    <li class="list-inline-item">
-                        <a class="btn-floating btn-fb mx-1 bear_Orange h1" href="https://www.facebook.com" target="_blank">
-                            <i class="fab fa-facebook-f"> </i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn-floating btn-tw mx-1 bear_Orange h1" href="https://www.facebook.com" target="_blank">
-                            <i class="fab fa-twitter"> </i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn-floating btn-gplus mx-1 bear_Orange h1" href="https://www.facebook.com"
-                            target="_blank">
-                            <i class="fab fa-google-plus-g"> </i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn-floating btn-li mx-1 bear_Orange h1" href="https://www.facebook.com" target="_blank">
-                            <i class="fab fa-linkedin-in"> </i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item"> 
-                        <a class="btn-floating btn-dribbble mx-1 bear_Orange h1 mb-5" href="https://www.facebook.com"
-                            target="_blank">
-                            <i class="fab fa-dribbble"> </i>
-                        </a>
-                    </li>
-                </ul>
-        </div>
-    </div>
+    
 
     <!-- Footer -->
     <?php include_once "./php/includes/footer.php" ?>
