@@ -25,7 +25,7 @@ include_once ('connexion.php');
       <!-- é para exibir o erro no email caso não esteja preenchido -->
       <p id="legenda_cadastName" class="erro_legenda"></p>
     </div>
-  <!---->
+  <!-- -->
       <div class="form-group col-md-6">
         <label for="inputEmail4">Email *</label>
         <input type="email" name="email" class="form-control" id="cadast_Email" placeholder="Email">

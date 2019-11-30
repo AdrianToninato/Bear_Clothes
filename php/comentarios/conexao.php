@@ -3,9 +3,9 @@
 // Realizando conexão com o banco de dados.
 
 //Definindo constantes
-$host = "localhost";
-$user = "root";
-$pass = "usbw";
+$host     = "localhost";
+$user     = "root";
+$pass     = "usbw";
 $database = "db_login";
 
 //preparando conexão

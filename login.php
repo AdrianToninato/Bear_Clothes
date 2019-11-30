@@ -112,7 +112,7 @@ endif;
     <div id="preto"></div>
 
 
-
+      <!-- Form Login -->
       <div class="container login-container">
         <div class="row">
 
@@ -153,18 +153,18 @@ endif;
 
             </div>
 
-            <!-- REGISTER -->
+            <!-- Form Cadastro -->
             <div class="col-md-6 login-form-2">
                 <div class="login-logo">
                     <img src="./img/brand/logoPretoBranco.png" alt="" />
                 </div>
                 <h3>REGISTRE-SE</h3>
                 <div class="form-group text-center mb-3">
-                    <a href="https://www.facebook.com" id="registroFacil"><i class="fab fa-facebook-square ml-3 mr-3"
+                    <a href="https://www.facebook.com"  id="registroFacil" target="_blank"><i class="fab fa-facebook-square ml-3 mr-3"
                             target="_blank"></i></a>
-                    <a href="https://gmail.com" id="registroFacil"><i class="fab fa-google mr-3"
+                    <a href="https://gmail.com"         id="registroFacil" target="_blank"><i class="fab fa-google mr-3"
                             target="_blank"></i></a>
-                    <a href="https://www.instagram.com" id="registroFacil"><i class="fab fa-instagram mr-3"
+                    <a href="https://www.instagram.com" id="registroFacil" target="_blank"><i class="fab fa-instagram mr-3"
                             target="_blank"></i></a>
                 </div>
                 <div class="form-group text-center text-white">

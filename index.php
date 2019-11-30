@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
 
-<!-- Comentário teste -->
-
 <head>
   <?php include_once "./php/includes/head.php" ?>
 </head>
@@ -37,6 +35,7 @@
   <!-- Linha Laranja -->
   <div class="countainer-fluid" id="linha"></div>
 
+  <!-- Grid De Produtos -->
   <?php include_once "./php/includes/gridProducts.php" ?>
 
   <!-- Footer -->
