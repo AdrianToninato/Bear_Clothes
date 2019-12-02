@@ -68,7 +68,7 @@ if (isset($_POST['btn-enter'])):
 
             if ($_SESSION['acesso'] == 1):
 
-                header ('Location: customer.php');
+                header ('Location: index.php?logado');
 
             elseif ($_SESSION['acesso'] == 0):
                     
@@ -76,7 +76,7 @@ if (isset($_POST['btn-enter'])):
 
             else: 
 
-                header ('Location: index.php');
+                header ('Location: index.php?erro');
 
             endif;
 
