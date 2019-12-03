@@ -23,9 +23,6 @@
                 </a>
                   <p class='card-text'>".$rows['descricao']." </p>
                   <div class='d-flex justify-content-between align-items-center'>
-                  <div class='btn-group'>
-                    <button type='button' class='btn btn-sm btn-outline-secondary bear_btn_C'>Editar</button>
-                    </div>
                     <p class='mb-1 mt-auto  font-weight-bold h2 bear_Orange'>".$rows['preco']."</p>
                     </div>
                   </div>

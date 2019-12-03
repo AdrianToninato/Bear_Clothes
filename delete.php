@@ -2,7 +2,7 @@
 
 include_once 'connexion.php';
 
-if (isset($_POST['btn-deletar-customer'])): // Se existe o índice btn-cadastrar no post é porque alguém clicou //
+if (isset($_POST['btn-deletar-customer'])): // Se existe o índice btn-delete-customer no post é porque alguém clicou //
 
     $id = mysqli_escape_string($conn, $_POST['idCustomer']);
 

@@ -1,53 +1,41 @@
-<?php
-
-// Realizando conexão.
-include_once ('connexion.php');
-
-// Iniciando sessão.
-session_start();
-
-if (!isset($_SESSION['logado'])):
-
-    header ('Location: login.php');
-
-else: 
-
-    if ($_SESSION['acesso'] == 1):
-
-        header ('Location: login.php');
-
-    endif;
-
-endif;
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <?php include_once "./php/includes/head.php" ?>
+    <?php include_once "./php/includes/head.php" ?>
 </head>
 <body>
-  <!-- Nav Bar -->
-  <?php include_once "./php/includes/navbar.php" ?>
-  <div id="preto"></div>
-<div class="container mt-5 mb-5">
-    <form action="create-product.php" method="post">
-        <div class="form-row">
-        <!-- Inseri essa linha -->
-            <div class="form-group col-md-12">
-                <label for="inputNome4">Nome do produto:</label>
-                    <input type="text" name="product_name" class="form-control" placeholder="Nome do produto">
-            </div>
-            <div class="form-group col-md-12">
-                <label for="inputNome4">Preço do produto:</label>
-                    <input type="text" name="product_value" class="form-control" placeholder="Preço do produto">
-            </div>
-            <button class="btn btn-success">Adicionar</button>
-    </form>
-    <a href="index.php"><button class="btn btn-primary ml-3">Cancelar</button></a>
-</div>
-</div>
-<!-- Footer -->
+    <!-- Nav Bar -->
+    <?php include_once "./php/includes/navbar.php" ?>
+    <div id="preto"></div>
+    <div class="container mt-5 mb-5">
+        <article>
+            <form action="create-product.php" method="post">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" name="name_product" class="form-control" placeholder="Nome do produto">
+                </div>
+                <div class="form-group">
+                    <label>Imagem:</label>
+                    <input type="text" name="img_product" class="form-control" placeholder="Imagem do produto">
+                </div>
+                <div class="form-group">
+                    <label>Link:</label>
+                    <input type="text" name="link_product" class="form-control" placeholder="Página do produto">
+                </div>
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <input type="text" name="description_product" class="form-control" placeholder="Descrição do produto">
+                </div>
+                <div class="form-group">
+                    <label>Preço:</label>
+                    <input type="text" name="value_product" class="form-control" placeholder="Valor do produto">
+                </div>
+                <input type="submit" value="Criar produto" class="btn btn-success" name="btn-create-product">
+            </form>
+                <a href="adm.php"><input type="button" value="Cancelar" class="mt-3 btn btn-danger"></a>
+        </article>
+    </div>
+    <!-- Footer -->
     <?php include_once "./php/includes/footer.php" ?>
 </body>
 </html>
