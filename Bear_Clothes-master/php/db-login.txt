@@ -1,0 +1,81 @@
+﻿CREATE DATABASE db_login;
+
+USE db_login;
+
+CREATE TABLE user_register
+(cdUser INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ cdPermission INT NOT NULL DEFAULT 0,
+ name VARCHAR(150) NOT NULL,
+ email VARCHAR(150) NOT NULL,
+ pass VARCHAR(128) NOT NULL,
+ address VARCHAR(150) NOT NULL,
+ number INT NOT NULL,
+ complement VARCHAR(150) NULL,
+ city VARCHAR(150) NOT NULL,
+ state VARCHAR(150) NOT NULL,
+ zipcode INT NOT NULL);
+
+CREATE TABLE customer_register
+(cdCustomer INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ cdPermission INT NOT NULL DEFAULT 1,
+ name VARCHAR(150) NOT NULL,
+ email VARCHAR(150) NOT NULL,
+ pass VARCHAR(128) NOT NULL,
+ address VARCHAR(150) NOT NULL,
+ number INT NOT NULL,
+ complement VARCHAR(150) NULL,
+ city VARCHAR(150) NOT NULL,
+ state VARCHAR(150) NOT NULL,
+ zipcode INT NOT NULL);
+
+
+******************************************************* CRIANDO PRODUTOS **********************************
+
+CREATE TABLE IF NOT EXISTS `bear_produtos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(220) NOT NULL,
+  `link` varchar(220) NOT NULL,
+  `img` varchar(220) NOT NULL,
+  `descricao` varchar(220) NOT NULL,
+  `preco` varchar(220) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+INSERT INTO `bear_produtos` (`id`, `nome`,`link`,`img`,`descricao`,`preco`) VALUES
+(1, 'Camiseta Preta Masculina da Bear Clothes', '#','img/products/black_front.jpg','Camiseta Preta Masculina da Bear Clothes, confortavel e estilosa demais...','70,99'),
+(2, 'Camiseta Verde Masculina da Bear Clothes', '#','img/products/gree_front.jpg','Camiseta Verde Masculina da Bear Clothes, confortavel e estilosa demais...','99,99'),
+(3, 'Camiseta Cinza Masculina da Bear Clothes (Escrito)', '#','img/products/grey_back.jpg','Camiseta Cinza Masculina da Bear Clothes escrita Bear nas costas, confortavel e estilosa demais...','40,99'),
+(4, 'Camiseta Cinza Masculina da Bear Clothes (Logo)', '#','img/products/grey_back2.jpg','Camiseta Cinza Masculina da Bear Clothes com fucinho de urso nas costas, confortavel e estilosa demais...','84,99'),
+(5, 'Camiseta Roxo Masculina da Bear Clothes', '#','img/products/purple_back.jpg','Camiseta Roxa Masculina da Bear Clothes ,confortavel e estilosa demais...','62,99'),
+(6, 'Camiseta Branca Feminina da Bear Clothes', '#','img/products/white_female.jpg','Camiseta branca Feminina da Bear Clothes ,confortavel e estilosa demais...','50,99'),
+(7, 'Camiseta Branca Masculina da Bear Clothes', '#','img/products/white_front.jpg','Camisa branca muito estiosa com um urso no mamilo...','54,99'),
+(8, 'Camiseta Vinho Masculina da Bear Clothes', '#','img/products/wine_front.jpg','Camiseta Vinho Masculina da Bear Clothes, confortavel e estilosa demais...','57,99');
+
+********************************************* CRIANDO DESTAQUES **************************************************
+
+CREATE TABLE IF NOT EXISTS `bear_destaques` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(220) NOT NULL,
+  `link` varchar(220) NOT NULL,
+  `img` varchar(220) NOT NULL,
+  `descricao` varchar(220) NOT NULL,
+  `preco` varchar(220) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+INSERT INTO `bear_destaques` (`id`, `nome`,`link`,`img`,`descricao`,`preco`) VALUES
+(1, 'Sweater de urso feminino', 'female.php','img/ui/carousel_01.jpg','Sweater bem quente e confortavel para poder aproveitar o inverno...','84,99'),
+(2, 'blusa jeans feminino', 'female.php','img/ui/carousel_02.jpg','Jeans da moda muito foda pra você que é skatista...','62,99'),
+(3, 'Casaco urso Pardo feminino', 'female.php','img/ui/carousel_03.jpg','Casacão bem fashion e confortavel, anti frio...','99,99');
+
+********************************************* CRIANDO COMENTARIOS **************************************************
+
+CREATE TABLE IF NOT EXISTS `bear_comentarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(220) NOT NULL,
+  `tittle` varchar(220) NOT NULL,
+  `text` varchar(220) NOT NULL,
+  PRIMARY KEY (`id`)
+);

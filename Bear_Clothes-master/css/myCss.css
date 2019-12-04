@@ -1,0 +1,184 @@
+/******** NAV BAR ********/
+nav {
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+nav a {
+    color: #fff;
+}
+
+#formNav::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+
+#formNav {
+    border-color: white;
+}
+
+#buttonNav {
+    outline-color: #000;
+    background-color: orangered;
+    color: #fff;
+}
+
+#bg {
+    background-color: orangered;
+}
+
+/******** INDEX *******/
+/**** COURSEL ****/
+#carouselExampleControls {
+    margin-top: -10vh;
+}
+
+#carouselSize {
+    height: 100vh;
+}
+
+#linha {
+    background-color: orangered;
+    height: 1vh;
+}
+
+/******** LOGIN *******/
+#preto {
+    margin-top: -10vh;
+    height: 10vh;
+    background-color: #000;
+}
+
+#registroFacil {
+    color: black;
+    font-size: 7.5vh;
+}
+
+#buttonNavDois {
+    background-color: black;
+    color: white;
+}
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #000;
+    border-radius: 4.5rem;
+    padding: 5%;
+}
+.login-form-1{
+    padding: 9%;
+    background: #000;
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    background: orangered;
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover{
+    text-decoration:none;
+    color:#fff;
+}
+.container {
+    max-width: 960px;
+  }
+  
+/******** MALE ********/
+  /*
+   * Utilitários extras
+   */
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+
+.erro_legenda{
+    color: orangered;
+}
+
+.bear_Orange{
+    color: orangered;
+}
+ 
+.bear_link_C:hover{
+    color: orangered;
+}
+.bear_link_noDec:hover{
+    text-decoration: none;
+}
+
+.bear_btn_C:hover{
+    background-color: orangered;
+    color: white;
+}
+
+/*---------------------------------------
+  Contact section              
+-----------------------------------------*/
+
+.contact-info .fa {
+    padding-right: 5px;
+  }
+  
+  
+  #contact input {
+    height: 40px;
+  }
+  
+  #contact button#submit {
+    background: #2b2b2b;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    height: 50px;
+    margin-top: 24px;
+  }
+  
+  #contact button#submit:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+  
+  
