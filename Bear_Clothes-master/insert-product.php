@@ -9,7 +9,7 @@
     <div id="preto"></div>
     <div class="container mt-5 mb-5">
         <article>
-            <form action="create-product.php" method="post" id="insert_products">
+            <form action="create-product.php" method="post" id="insert_products" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Nome:</label>
                     <input type="text" name="name_product" id="productIn_nome" class="form-control" placeholder="Nome do produto">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="form-group">
                     <label>Imagem:</label>
-                    <input type="text" name="img_product" id="productIn_imagem" class="form-control" placeholder="Imagem do produto">
+                    <input type="file" name="img_product" id="productIn_imagem" class="form-control" placeholder="Imagem do produto" accept='image/*'>
                     <p id="legenda_productInImagem" class="erro_legenda"></p>
                 </div>
                 <div class="form-group">

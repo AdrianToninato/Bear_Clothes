@@ -11,7 +11,7 @@
   //essa função ira trazer os cards prontos para serem impressos no codigo html
    function cardsCaroussel($link){
     //alimentando a variavel linhas com os cards que teram no carossel
-    $linhas.="<div class='carousel-item active' id='carouselSize'>
+    $linhas ="<div class='carousel-item active' id='carouselSize'>
     <img class='d-block w-100' src='".$link[0]['img']."' alt='Primeiro Slide'>
   </div>
   <div class='carousel-item' id='carouselSize'>

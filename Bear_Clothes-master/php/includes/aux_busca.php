@@ -20,6 +20,7 @@
     //esta função sera essencial para exibir em tela no formato de card o que foi encontrado na busca
     //o segundo elemento necessário da função é apenas para ser utilizado na hora de exibir o erro
     function criarLinhas($resultado, $pesquisa){
+        $linhas='';
         //faz a contagem de quantas foram trazidas na busca
         $quantidade = mysqli_num_rows($resultado);
         //se a quantidade existir ou seja for maior que zero entra-se nesta opção (há resultados)
@@ -47,7 +48,7 @@
         //senão entra nesta ( não há resultados)
     }else{
         //exibe uma mensagem avisando ao usuario que nada foi encontrado
-            $linhas.='<div class="row">
+            $linhas ='<div class="row">
         <div class="col-10 ml-5 mb-5">
         <h5 class=" mb-3 h1 bear_Orange"> Não foi possivel encontrar resultados para : "'.$pesquisa.'"</h5>
         </div>

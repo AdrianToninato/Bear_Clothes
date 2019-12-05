@@ -92,8 +92,10 @@
     <div class="container">
         <div class="row">
             <a class="btn btn-outline-dark mb-5" href="./cadastrarComentario.php" role="button">Fazer Comentário</a>
+            <a class="btn btn-outline-danger mb-5 ml-5" href="./deleteComentario.php" role="button">Apagar Comentário</a>
         </div>
     </div>
+
 
     <!-- Footer -->
     <?php include_once "./php/includes/footer.php" ?>

@@ -81,7 +81,7 @@ $datas = mysqli_fetch_array ($result);
     <!-- FIM NAV -->
     <div class="container mt-5 mb-5">
         <h1 class="text-center">Atualizar produto</h1>
-        <form action="update-product.php" method="post" id="edit_products">
+        <form action="update-product.php" method="post" enctype="multipart/form-data" id="edit_products">
             <div class="form-group">
                 <input type="hidden" value="<?php echo $dados['id']; ?>" name="id">
                 <label>Nome do produto:</label>
@@ -90,7 +90,7 @@ $datas = mysqli_fetch_array ($result);
             </div>
             <div class="form-group">
                 <label>Imagem:</label>
-                <input type="text" name="img_product" id="productEd_imagem" class="form-control" value="<?php echo $dados['img']; ?>">
+                <input type="file" name="img_product" accept='image/*' id="productEd_imagem" class="form-control" value="<?php echo $dados['img']; ?>">
                 <p id="legenda_productEdImagem" class="erro_legenda"></p>
             </div>
             <div class="form-group">
